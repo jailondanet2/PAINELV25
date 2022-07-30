@@ -50,7 +50,7 @@ rm /root/PAINEL-V.25.zip > /dev/null 2>&1
 ####################################################################################################
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.25 VIP-VPS     \E[0m"
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
+echo -e "                              \033[1;31mBy @JailondaNET\033[1;36m"
 echo -e "   VIP-vps" | figlet 
 echo -e "                             \033[1;31mPainel-SSH V.25\033[1;36m"
 echo ""
@@ -132,7 +132,7 @@ echo ""
 clear
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
+echo -e "                              \033[1;31mBy @JailondaNET\033[1;36m"
 echo -e "   VIP-vps" | figlet
 echo ""
 echo -e "\033[1;31m ATENCAO \033[1;33m!!!"
@@ -147,7 +147,7 @@ clear
 #
 echo -e "           \033[1;33m● \033[1;32mFINALIZANDO INSTALACAO, PODE DEMORAR \033[1;33m● \033[1;33mAGUARDE...\033[0m"
 cd /var/www/html
-wget https://www.dropbox.com/s/o8fb07joyc2j6q8/PAINEL-V.25.zip > /dev/null 2>&1
+wget https://www.dropbox.com/s/3iuef0cei86cjt9/PAINEL-V.25.zip > /dev/null 2>&1
 sleep 1
 unzip PAINEL-V.25.zip > /dev/null 2>&1
 rm -rf PAINEL-V.25.zip index.html > /dev/null 2>&1
