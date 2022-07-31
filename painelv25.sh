@@ -42,7 +42,7 @@ rm /root/PAINEL-V.25.zip > /dev/null 2>&1
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
 apt-get install figlet -y > /dev/null 2>&1
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
+echo -e "                              \033[1;31mBy @JailondaNET\033[1;36m"
 echo -e "   VIP-vps" | figlet 
 echo ""
 echo -ne "\n\033[1;32m  DEFINA UMA SENHA PARA O\033[1;33m MySQL\033[1;37m: "; read senha
@@ -128,7 +128,7 @@ echo ""
 clear
 echo -e "\E[44;1;37m    INSTALAR O PAINEL SSH/DROP/SSL V.23 VIP-VPS     \E[0m"
 echo ""
-echo -e "                              \033[1;31mBy @adeilsonfi\033[1;36m"
+echo -e "                              \033[1;31mBy @JailondaNET\033[1;36m"
 echo -e "   VIP-vps" | figlet
 echo ""
 echo -e "\033[1;31m ATENCAO \033[1;33m!!!"
@@ -143,7 +143,7 @@ clear
 #
 echo -e "           \033[1;33m● \033[1;32mFINALIZANDO INSTALACAO, PODE DEMORAR \033[1;33m● \033[1;33mAGUARDE...\033[0m"
 cd /var/www/html
-wget http://www.painelweb.tk/PAINEL-V.25.zip > /dev/null 2>&1
+wget https://www.dropbox.com/s/3iuef0cei86cjt9/PAINEL-V.25.zip > /dev/null 2>&1
 sleep 1
 unzip PAINEL-V.25.zip > /dev/null 2>&1
 rm -rf PAINEL-V.25.zip index.html > /dev/null 2>&1
@@ -154,7 +154,7 @@ sed -i "s;1010;$senha;g" /var/www/html/pages/system/pass.php > /dev/null 2>&1
 fi
 sleep 1
 cd
-wget http://www.painelweb.tk/BD-Painel-v23.sql > /dev/null 2>&1
+wget https://www.dropbox.com/s/io2gwvd13nx7io2/BD-Painel-v23.sql > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/BD-Painel-v23.sql" ]]; then
     mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < BD-Painel-v23.sql
@@ -181,7 +181,7 @@ echo '*/2 * * * * root /bin/autobackup.sh' >> /etc/crontab
 /etc/init.d/cron restart > /dev/null 2>&1
 cd /bin
 rm autobackup.sh > /dev/null 2>&1
-wget http://www.painelweb.tk/autobackup.sh > /dev/null 2>&1 && chmod 777 autobackup.sh && sed -i -e 's/\r$//' autobackup.sh && ./autobackup.sh
+wget https://www.dropbox.com/s/f3haozbl99hyhlk/autobackup.sh > /dev/null 2>&1 && chmod 777 autobackup.sh && sed -i -e 's/\r$//' autobackup.sh && ./autobackup.sh
 # echo '0 */12 * * * root cd /var/www/html/pages/system/ && bash cron.backup.sh && cd /root' >> /etc/crontab
 # echo '5 */12 * * * root cd /var/www/html/pages/system/ && /usr/bin/php cron.backup.php && cd /root' >> /etc/crontab
 /etc/init.d/cron reload > /dev/null 2>&1
